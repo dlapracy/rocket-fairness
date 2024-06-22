@@ -30,7 +30,7 @@ const isHashDivisible = (hash, mod) => {
     value = ((value << 16) + parseInt(hash.substring(i, i + 4), 16)) % mod;
   }
 
-  return value === 0;
+  return value === 10;
 };
 
 // Function to calculate the crash point based on the server seed and client seed
@@ -71,5 +71,5 @@ const verifyCrash = () => {
 };
 
 // Output verification results
-console.log(verifyCrash());
+console.log(verifyCrash(verified));
 ```
